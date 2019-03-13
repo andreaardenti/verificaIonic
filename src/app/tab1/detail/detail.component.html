@@ -1,0 +1,26 @@
+<ion-header>
+    <ion-toolbar>FEED</ion-toolbar>
+  </ion-header>
+  
+<ion-content padding>
+  <ion-list *ngIf='post'>
+    <ion-card class="welcome-card">
+      <p>{{ post.author }}</p>
+      <ion-img [src]="post.image"></ion-img>
+      <p>{{ post.message }}</p>
+      <p>LIKES: {{ post.likes }}</p>
+      <div *ngFor="let comment of post.comments">
+        <p>COMMENT.AUTHOR: {{ comment.author }}</p>
+        <p>COMMENT.MESSAGE: {{ comment.message }}</p>
+      </div>
+    </ion-card>
+  </ion-list>
+  <ion-button href='' routerLink='/tabs/tab1' routerDirection="root">Back</ion-button>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+      <ion-input placeholder="Insert your message here" [(ngModel)]='notice.message'></ion-input>
+      <ion-button (click)='send()'>Send</ion-button>
+    </ion-toolbar>
+</ion-footer>

@@ -1,9 +1,18 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Tab Three
+      New Post
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+  <ion-label>Create your new post</ion-label>
+  <ion-input placeholder="Insert your nick name" [(ngModel)]='post.author'></ion-input>
+  <ion-input placeholder="Insert your message" [(ngModel)]='post.message'></ion-input>
+  <ion-input placeholder="Insert your image url" [(ngModel)]='post.image'></ion-input>
+  <ion-button (click)='set()'>Create</ion-button>
+</ion-content>
+
+
+<!-- https://static.independent.co.uk/s3fs-public/thumbnails/image/2017/09/12/11/naturo-monkey-selfie.jpg?w968 -->

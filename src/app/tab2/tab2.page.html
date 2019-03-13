@@ -1,9 +1,13 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Tab Two
+      Hi, set your nick name...
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+    <ion-label>Set your nick name...</ion-label>
+    <ion-input placeholder="Insert your nick here" [(ngModel)]='author'></ion-input>
+    <ion-button (click)='set()'>Set</ion-button>
+</ion-content>
